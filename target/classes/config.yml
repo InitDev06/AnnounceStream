@@ -1,0 +1,69 @@
+# AnnounceStream 1.0 - Thanks for using my plugin!
+#
+# options.use_component: Send the link of stream with TextComponent?
+# options.cooldown_cmd: This is the time for the cooldown.
+# options.sounds - {
+#
+#    reproduce: Reproduce sounds to player?
+#    permission: If the player doesn't have the permission, will dream this sound.
+#    reload: When the plugin be reloaded, will dream this sound.
+#    cooldown: If the player have a cooldown, will dream this sound.
+#    stream_announce: This sound will be when the streamer use the /stream command.
+#
+# options.messages - {
+#
+#    prefix: This is the prefix of the messages.
+#    command - {
+#
+#       motd_stream: This is the MOTD Message for the /stream command.
+#       hover_name: This is the name of the hover for the link.
+#       hover_text: This is the text of the hover.
+#       invalid_format: If the player insert a invalid URL.
+#       cooldown: If the player have a cooldown activated.
+#       event_cancelled: This is if there are a world disabled for the command.
+options:
+  use_component: true
+  cooldown_cmd: 4
+
+  # Sounds section
+  sounds:
+    reproduce: true
+    permission: ENTITY_ITEM_BREAK
+    reload: UI_BUTTON_CLICK
+    cooldown: BLOCK_NOTE_BLOCK_PLING
+    stream_announce: ENTITY_ENDER_DRAGON_FLAP
+    volume: 1.0
+    pitch: 1.0
+
+  # Messages section
+  messages:
+    prefix: "&eAnnounceStream &8»"
+    not_permission: "<prefix> &cYou don't have permission!"
+    not_console: "<prefix> &cThis command can't be executed in console!"
+    not_command: "<prefix> &cThis command is not been added to plugin!"
+    list_cmds: |-
+      &l
+      &e          AnnounceStream &61.0
+      &l
+      &8 » &a/announcestream [/as] &fMain Command.
+      &8 » &a/as [commands] &fShow the commands of plugin.
+      &8 » &a/as [reload] &fReload the plugin.
+      &l
+      &8 » &a/stream <link> &fAnnounce your stream.
+      &l
+
+    reload: "<prefix> &7The plugin was reloaded correctly in &a<ms>ms&7."
+    command:
+      stream_usage: "&cPlease insert your stream link!"
+      motd_stream: |-
+        &l
+        &7          The player &d&lSTREAMER &e<player>
+        &7               is now broadcasting live!
+        &l
+        &7          Link: &c<link>
+        &l
+
+      hover_name: "              &b&lJOIN TO BROADCASTING"
+      hover_text: "&aYou like view the stream?\n&l\n&eGo ahead click to link!"
+      invalid_format: "&cYou must be insert a valid &c&lURL"
+      cooldown: "&cYou must be wait &e<time> &cseconds to use this command again!"
