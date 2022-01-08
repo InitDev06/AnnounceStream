@@ -1,0 +1,24 @@
+name: AnnounceStream
+main: org.alqj.dev.announcestream.AnnounceStream
+version: 1.0
+api-version: 1.13
+author: iAlqjDV
+website: https://www.spigotmc.org/members/ialqjdv.1471925/
+description: Announce your Live Stream to all server!
+softdepend: [PlaceholderAPI]
+depend: [Vault]
+permissions:
+  announcestream.admin:
+    children:
+      announcestream.cmd.*:
+        children:
+          - announcestream.cmd.commands
+          - announcestream.cmd.reload
+          - announcestream.cmd.stream
+commands:
+  announcestream:
+    description: Main Command.
+    aliases: [as]
+  stream:
+    description: Announce your stream.
+    aliases: [live, twitch]
