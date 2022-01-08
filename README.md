@@ -1,2 +1,2 @@
 # AnnounceStream
-Announce your Live Stream to all server!
+Source code of AnnounceStream plugin, download in:
